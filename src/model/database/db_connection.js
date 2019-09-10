@@ -1,5 +1,6 @@
 const { Pool } = require("pg");
 const url = require("url");
+require("dotenv").config();
 
 let DATABASE_URL = process.env.DATABASE_URL;
 if (process.env.NODE_ENV === "test") {
