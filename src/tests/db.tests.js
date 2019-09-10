@@ -1,5 +1,6 @@
 const test = require("tape");
 const runBuild = require("../model/database/db_build");
+const { findAllFoodItems } = require("../model/queries/findQueries");
 
 test("Check that we're ready for database testing", t => {
   t.assert(true, true, "Must return true");
@@ -17,4 +18,16 @@ test("Check database build is successful", t => {
       t.end();
     }
   });
+});
+
+test("Check findAllFoodItems queries correctly", t => {
+    findAllFoodItems((err, res) => {
+        if(err) {
+            t.error(err, "Unable to findAllFoodItems");
+            t.end();
+        } else {
+            t.deepEquals(res, [{Banana: Fruit}, {Potato: Vegetable}, {Sausages: Meat}, {Apple: Fruit}]);
+            t.end();
+        }
+    })
 });
