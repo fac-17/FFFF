@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "node src/index.js",
-    "watch": "nodemon -q src/index.js"
+    "watch": "nodemon src/index.js",
+    "lint": "eslint .",
+    "test": "NODE_ENV=test tape src/tests/*tests.js | tap-spec"
   },
   "repository": {
     "type": "git",
