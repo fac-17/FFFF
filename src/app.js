@@ -1,6 +1,6 @@
 const express = require('express');
 const path = require('path');
-const favicon = require('serve-favicon');
+// const favicon = require('serve-favicon');
 const exphbs = require('express-handlebars');
 require('dotenv').config();
 //import helpers
