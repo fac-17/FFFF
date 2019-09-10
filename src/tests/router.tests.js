@@ -12,7 +12,7 @@ test('Check that the home route is working', t => {
     supertest(app)
         .get('/')
         .expect(200)
-        .end((err, res) => {
+        .end((err) => {
             t.error(err);
             t.end();
         });
