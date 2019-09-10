@@ -13,7 +13,17 @@ test('Check that the home route is working', t => {
         .get('/')
         .expect(200)
         .end((err) => {
-            t.error(err);
+            t.error(err,"/ works");
             t.end();
         });
+})
+
+test('Check that the select route is working', t=>{
+    supertest(app)
+        .get('/select')
+        .expect(200)
+        .end( (err)=>{
+            t.error(err,"/select does work");
+            t.end()
+        })
 })
