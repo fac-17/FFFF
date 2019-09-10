@@ -26,7 +26,8 @@ test("Check findAllFoodItems queries correctly", t => {
             t.error(err, "Unable to findAllFoodItems");
             t.end();
         } else {
-            t.deepEquals(res, [{Banana: Fruit}, {Potato: Vegetable}, {Sausages: Meat}, {Apple: Fruit}]);
+            const expected = [{"Banana": "Fruit"}, {"Potato": "Vegetables"}, {"Sausages": "Meat"}, {"Apple": "Fruit"}];
+            t.deepEquals(res, expected);
             t.end();
         }
     })
