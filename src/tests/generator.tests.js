@@ -16,7 +16,7 @@ test('Check generator returns an array', t => {
 
 test('Check generator returns an array with appropriate length', t => {
     const actual = generator(6, 5, 7).length;
-    const expected = 6;
+    const expected = 36;
     t.deepEquals(expected, actual, 'Check gen returns an array');
     t.end();
 });

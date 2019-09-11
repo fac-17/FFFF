@@ -1,12 +1,12 @@
 const generator = (productNum, supermarketNum, originNum) => {
-    let matrix = [];
-    let end = productNum;
-    while(end > 0) {
-        end--;
-        matrix.push([]);
-    }
-    console.log(matrix);
-    return matrix;
+    const count = productNum * supermarketNum;
+    let a = Array(count)
+    .fill(getRandomInteger(1, productNum))
+    .map(x => Array(3)
+    .fill(getRandomInteger(1, productNum)));
+    
+    console.log(a);
+    return a;
 }
 
 const getRandomInteger = (min, max) => {
