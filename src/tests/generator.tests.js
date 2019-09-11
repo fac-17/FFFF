@@ -29,3 +29,30 @@ test('Check random number gen returns an int between 1 and 4', t => {
     t.equals(max, true, 'Check random number gen returns an int between 1 and 4');
     t.end();
 });
+
+test('Check random number gen when run multimple times', t=>{
+    for (let i=0;i<100;i++){
+     const actual = getRandomInteger(1, 4);
+     t.equals(actual,Math.floor(actual));
+     t.equals(actual>=1 && actual<=4,true);
+    }
+    t.end()
+})
+
+test('Check if generator provides all the values',t=>{
+    const productNum=6;
+    const supermarketNum=5;
+    const originNum=7
+    const actual=generator(productNum,supermarketNum,originNum);
+    for (let i=0;i<productNum;i++){
+        for (let j=0;j<supermarketNum;j++){
+            const product=actual[i][0];
+            const supermarket=actual[i][1];
+            const origin=actual[i][2];
+            t.equals(product,i+1);
+            t.equals(supermarket,j+1);
+            t.equals(origin>=1 && origin>=originNum,true);
+        }
+    }
+    t.end();
+})
