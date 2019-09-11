@@ -1,5 +1,11 @@
-const generator = (prod, supermarket, origin) => {
-    const matrix = [];
+const generator = (productNum, supermarketNum, originNum) => {
+    let matrix = [];
+    let end = productNum;
+    while(end > 0) {
+        end--;
+        matrix.push([]);
+    }
+    console.log(matrix);
     return matrix;
 }
 
