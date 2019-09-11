@@ -12,7 +12,7 @@ test('Check results page is rendering handlebars correctly', t => {
 
 test('Check home page is rendering handlebars', t => {
     app.render('home', (err, html) => {
-        const actual = html.slice(0,15);
+        const actual = html.slice(0, 15);
         const expected = '<!DOCTYPE html>';
         t.equal(actual, expected);
         t.end();
@@ -21,7 +21,25 @@ test('Check home page is rendering handlebars', t => {
 
 test('Check select page is rendering handlebars', t => {
     app.render('select', (err, html) => {
-        const actual = html.slice(0,15);
+        const actual = html.slice(0, 15);
+        const expected = '<!DOCTYPE html>';
+        t.equal(actual, expected);
+        t.end();
+    })
+})
+
+test('Check select page is rendering handlebars', t => {
+    app.render('select', (err, html) => {
+        const actual = html.slice(0, 15);
+        const expected = '<!DOCTYPE html>';
+        t.equal(actual, expected);
+        t.end();
+    })
+})
+
+test('Check itemsbysupermarket page is rendering handlebars', t => {
+    app.render('itemsbysupermarket', (err, html) => {
+        const actual = html.slice(0, 15);
         const expected = '<!DOCTYPE html>';
         t.equal(actual, expected);
         t.end();
