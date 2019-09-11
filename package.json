@@ -7,7 +7,8 @@
     "start": "node src/index.js",
     "watch": "nodemon src/index.js",
     "lint": "eslint .",
-    "test": "NODE_ENV=test tape src/tests/*tests.js | tap-spec"
+    "test": "NODE_ENV=test tape src/tests/*tests.js | tap-spec",
+    "db_init": "node src/model/database/db_init.js"
   },
   "repository": {
     "type": "git",
