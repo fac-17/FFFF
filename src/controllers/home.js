@@ -1,4 +1,4 @@
 exports.get = (req,res)=>{
-    res.send("Hello / !");
+    res.render("home");
 }
 
