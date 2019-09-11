@@ -1,6 +1,9 @@
 const generator = (prod, supermarket, origin) => {
-
     return [];
 }
 
-module.exports = { generator }
+const getRandomInteger = (min, max) => {
+    return Math.round(Math.random() * (max - min) + min);
+}
+
+module.exports = { generator, getRandomInteger }
