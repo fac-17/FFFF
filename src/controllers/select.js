@@ -1,3 +1,5 @@
 exports.get = (req, res) => {
-    res.send('hello select')
+    // get from the db
+    const dummyData = ['banana', 'apple','orange'];
+    res.render("select", { dummyData});
 };
