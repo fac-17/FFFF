@@ -23,7 +23,7 @@ CREATE TABLE products
 (
     id SERIAL PRIMARY KEY,
     name VARCHAR(100) NOT NULL,
-    category_id INTEGER REFERENCES categories (id)
+    category_id INTEGER NOT NULL REFERENCES categories (id)
 );
 CREATE TABLE supermarkets
 (
@@ -40,15 +40,15 @@ CREATE TABLE origins
     id SERIAL PRIMARY KEY,
     name VARCHAR(100) NOT NULL,
     score INTEGER NOT NULL, 
-    flag_id INTEGER REFERENCES flags (id)
+    flag_id INTEGER NOT NULL REFERENCES flags (id)
 );
 
 CREATE TABLE entries
 (
     id SERIAL PRIMARY KEY,
-    product_id INTEGER REFERENCES products (id),
-    supermarket_id INTEGER REFERENCES supermarkets (id),
-    origin_id INTEGER REFERENCES origins (id),
+    product_id INTEGER NOT NULL REFERENCES products (id),
+    supermarket_id INTEGER NOT NULL REFERENCES supermarkets (id),
+    origin_id INTEGER NOT NULL REFERENCES origins (id),
     timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
@@ -76,10 +76,10 @@ VALUES
     ('U+1F1F7'),
     ('U+1F1EE');
 INSERT INTO origins
-    (name, flag_id)
+    (name, score, flag_id)
 VALUES
-    ('Brazil', 1),
-    ('Ireland', 2);
+    ('Brazil', 4, 1),
+    ('Ireland', 2, 2);
 INSERT INTO entries
     (product_id, supermarket_id, origin_id)
 VALUES
