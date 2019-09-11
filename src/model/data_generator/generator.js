@@ -1,9 +1,10 @@
 const generator = (productNum, supermarketNum, originNum) => {
     const count = productNum * supermarketNum;
     let a = Array(count)
-    .fill(getRandomInteger(1, productNum))
-    .map(x => Array(3)
-    .fill(getRandomInteger(1, productNum)));
+    .fill([])
+    .map( () => Array(3)
+     .fill(0)
+     .map( ()=>getRandomInteger(1, originNum) ));
     
     console.log(a);
     return a;
