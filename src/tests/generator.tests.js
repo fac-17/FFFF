@@ -8,8 +8,8 @@ test('Check that we\'re ready for gen testing', t => {
 });
 
 test('Check gen returns an array', t => {
-    const expected = typeof [];
-    const actual = typeof generator();
+    const expected = Array.isArray([]);
+    const actual = Array.isArray(generator());
     t.deepEquals(expected, actual, 'Check gen returns an array');
     t.end();
 });

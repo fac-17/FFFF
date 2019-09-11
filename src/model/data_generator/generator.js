@@ -1,6 +1,6 @@
 const generator = (prod, supermarket, origin) => {
 
-    return 'blah';
+    return [];
 }
 
 module.exports = { generator }
