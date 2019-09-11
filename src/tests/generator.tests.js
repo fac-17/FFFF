@@ -29,3 +29,12 @@ test('Check random number gen returns an int between 1 and 4', t => {
     t.equals(max, true, 'Check random number gen returns an int between 1 and 4');
     t.end();
 });
+
+test('Check random number gen when run multimple times', t=>{
+    for (let i=0;i<100;i++){
+     const actual = getRandomInteger(1, 4);
+     t.equals(actual,Math.floor(actual));
+     t.equals(actual>=1 && actual<=4,true);
+    }
+    t.end()
+})
