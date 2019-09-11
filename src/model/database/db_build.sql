@@ -39,6 +39,7 @@ CREATE TABLE origins
 (
     id SERIAL PRIMARY KEY,
     name VARCHAR(100) NOT NULL,
+    score INTEGER NOT NULL, 
     flag_id INTEGER REFERENCES flags (id)
 );
 
