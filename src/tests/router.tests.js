@@ -12,18 +12,30 @@ test('Check that the home route is working', t => {
     supertest(app)
         .get('/')
         .expect(200)
+        .expect('Content-Type', /html/)
         .end((err) => {
-            t.error(err,"/ works");
+            t.error(err, "/ works");
             t.end();
         });
 })
 
-test('Check that the select route is working', t=>{
+test('Check that the select route is working', t => {
     supertest(app)
         .get('/select')
         .expect(200)
-        .end( (err)=>{
-            t.error(err,"/select does work");
+        .expect('Content-Type', /html/)
+        .end((err) => {
+            t.error(err, "/select does work");
             t.end()
+        })
+})
+test('Check that the results route is working', t => {
+    supertest(app)
+        .get('/results')
+        .expect(200)
+        .expect('Content-Type', /html/)
+        .end((err) => {
+            t.error(err, '/results does work');
+            t.end();
         })
 })
