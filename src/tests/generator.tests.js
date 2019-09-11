@@ -40,18 +40,20 @@ test('Check random number gen when run multimple times', t=>{
 })
 
 test('Check if generator provides all the values',t=>{
-    const productNum=6;
-    const supermarketNum=5;
-    const originNum=7
+    const productNum=2;
+    const supermarketNum=3;
+    const originNum=4;
     const actual=generator(productNum,supermarketNum,originNum);
     for (let i=0;i<productNum;i++){
         for (let j=0;j<supermarketNum;j++){
-            const product=actual[i][0];
-            const supermarket=actual[i][1];
-            const origin=actual[i][2];
-            t.equals(product,i+1);
-            t.equals(supermarket,j+1);
-            t.equals(origin>=1 && origin>=originNum,true);
+            const index= supermarketNum*i+j
+            const product=actual[index][0];
+            const supermarket=actual[index][1];
+            const origin=actual[index][2];
+            
+            t.equals(product,i+1, "Testing product");
+            t.equals(supermarket,j+1, "Testing supermarket");
+            t.equals(origin>=1 && origin<=originNum,true, "Testing origin");
         }
     }
     t.end();

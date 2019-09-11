@@ -1,12 +1,13 @@
 const generator = (productNum, supermarketNum, originNum) => {
-    const count = productNum * supermarketNum;
-    let a = Array(count)
-    .fill([])
-    .map( () => Array(3)
-     .fill(0)
-     .map( ()=>getRandomInteger(1, originNum) ));
-    
-    console.log(a);
+    let a = [];
+    console.log("productNum", productNum);
+    console.log("supermarketNum", supermarketNum);
+    for (let i=0;i<productNum;i++){
+        for (let j=0;j<supermarketNum;j++){
+            let entry = [i+1, j+1, getRandomInteger(1, originNum)];
+            a.push(entry);
+        }
+    }
     return a;
 }
 
