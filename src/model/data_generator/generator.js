@@ -1,5 +1,6 @@
 const generator = (prod, supermarket, origin) => {
-    return [];
+    const matrix = [];
+    return matrix;
 }
 
 const getRandomInteger = (min, max) => {

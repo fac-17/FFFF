@@ -7,9 +7,16 @@ test('Check that we\'re ready for gen testing', t => {
     t.end();
 });
 
-test('Check gen returns an array', t => {
-    const actual = Array.isArray(generator());
+test('Check generator returns an array', t => {
+    const actual = Array.isArray(generator(1, 2, 3));
     const expected = Array.isArray([]);
+    t.deepEquals(expected, actual, 'Check gen returns an array');
+    t.end();
+});
+
+test('Check generator returns an array with appropriate length', t => {
+    const actual = generator(6, 5, 7).length;
+    const expected = 6;
     t.deepEquals(expected, actual, 'Check gen returns an array');
     t.end();
 });
