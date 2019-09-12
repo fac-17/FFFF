@@ -1,3 +1,5 @@
+
+const { findRowsCountForProductsSupermarketsOriginsFunction } = require('../queries/findQueries');
 const generator = (productNum, supermarketNum, originNum) => {
     let a = [];
     console.log("productNum", productNum);
@@ -14,5 +16,9 @@ const generator = (productNum, supermarketNum, originNum) => {
 const getRandomInteger = (min, max) => {
     return Math.round(Math.random() * (max - min) + min);
 }
+
+// const populateEntriesTable = () => {
+
+// }
 
 module.exports = { generator, getRandomInteger }

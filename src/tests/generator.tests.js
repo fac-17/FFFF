@@ -61,7 +61,6 @@ test('Check if generator provides all the values', t => {
 });
 
 test('Check findRowsCountForProductsSupermarketsOriginsFunction provides an array of 3 integers', t => {
-    console.log(findRowsCountForProductsSupermarketsOriginsFunction)
     findRowsCountForProductsSupermarketsOriginsFunction()
         .then(res => {
             const actual = Array.isArray(res);
