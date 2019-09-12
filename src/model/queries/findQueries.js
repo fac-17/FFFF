@@ -31,7 +31,7 @@ const findRowsCountForProductsSupermarketsOriginsFunction = () => {
 }
 
 
-/*console.log(findRowsCountForProductsSupermarketsOriginsFunction()
-.then(res => console.log(res.map(e => Number(e.rows[0].count)))));*/
+console.log(findRowsCountForProductsSupermarketsOriginsFunction()
+.then(res => console.log(res.map(e => Number(e.rows[0].count)))));
 
 module.exports = { findAllFoodItems, findAllFoodItemsPromise, findRowsCountForProductsSupermarketsOriginsFunction }
