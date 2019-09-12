@@ -4,10 +4,10 @@ const { dropEntries } = require('../queries/deleteQueries');
 const { insertEntries } = require('../queries/insertQueries');
 
 const generator = (productNum, supermarketNum, originNum) => {
-    let a = [];
+    const a = [];
     for (let i=0;i<productNum;i++){
         for (let j=0;j<supermarketNum;j++){
-            let entry = [i+1, j+1, getRandomInteger(1, originNum)];
+            const entry = [i+1, j+1, getRandomInteger(1, originNum)];
             a.push(entry);
         }
     }
