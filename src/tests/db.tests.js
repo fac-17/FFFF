@@ -32,7 +32,7 @@ test("Check findAllFoodItems queries correctly", t => {
                 { pname: 'Sausages', cname: 'Meat' },
                 { pname: 'Apple', cname: 'Fruit' }
             ];
-            t.deepEquals(res, expected);
+            t.deepEquals(res.slice(0,4), expected);
             t.end();
         }
     })
@@ -47,7 +47,7 @@ test("Check findAllFoodItemsPromise queries correctly", t => {
                 { pname: 'Sausages', cname: 'Meat' },
                 { pname: 'Apple', cname: 'Fruit' }
             ];
-            t.deepEquals(res, expected);
+            t.deepEquals(res.slice(0,4), expected);
             t.end();
         })
         .catch(err => {
