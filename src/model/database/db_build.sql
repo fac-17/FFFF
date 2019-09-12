@@ -102,13 +102,4 @@ VALUES
     ('Poland',3,4),
     ('Japan',4,5),
     ('Spain',3,6);
-INSERT INTO entries
-    (product_id, supermarket_id, origin_id)
-VALUES
-    (1, 1, 1),
-    (1, 2, 2),
-    (2, 1, 1),
-    (2, 2, 2),
-    (3, 2, 1);
-
 COMMIT;
