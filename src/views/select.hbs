@@ -1,14 +1,10 @@
 <ul class="item-list">
     {{#each data}}
-    <li class="{{this.pname}}">{{this.pname}}, {{this.cname}} </li>
+    <li class="{{this.pname}}" data-value="{{this.product_id}}">{{this.pname}}, {{this.cname}} </li>
     {{/each}}
 </ul>
 <form action="/results" method="post" class="shopping-form">
-    <input type="text" name="product">
-    <input type="text" name="product">
     <input type="submit">
 </form>
-
-<button class="add-apple">Add apple</button>
 
 <script src="js/shoppingSelection.js"></script>
