@@ -32,7 +32,7 @@ test('Check that the select route is working', t => {
 test('Check that the results route is working', t => {
     supertest(app)
         .post('/results')
-        .send({name: 'john'})
+        .send({product: ['1']})
         .expect(200)
         .expect('Content-Type', /html/)
         .end((err) => {
