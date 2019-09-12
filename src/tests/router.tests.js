@@ -31,22 +31,13 @@ test('Check that the select route is working', t => {
 })
 test('Check that the results route is working', t => {
     supertest(app)
-        .get('/results')
+        .post('/results')
+        .send({name: 'john'})
+        .set('Accept', 'application/json')
         .expect(200)
         .expect('Content-Type', /html/)
         .end((err) => {
             t.error(err, '/results does work');
-            t.end();
-        })
-})
-
-test('check that the itemsbysupermarket route is working', t => {
-    supertest(app)
-        .get('/itemsbysupermarket')
-        .expect(200)
-        .expect('Content-Type', /html/)
-        .end(err => {
-            t.error(err, '/itemsbysupermarket does work');
             t.end();
         })
 })

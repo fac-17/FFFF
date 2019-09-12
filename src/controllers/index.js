@@ -7,7 +7,7 @@ const itemsbysupermarket = require('./itemsbysupermarket');
 
 router.get('/', home.get);
 router.get('/select', select.get);
-router.get('/results', results.get);
+router.post('/results', results.post);
 router.get('/itemsbysupermarket', itemsbysupermarket.get);
 
 module.exports = router;
