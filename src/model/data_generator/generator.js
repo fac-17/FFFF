@@ -19,7 +19,7 @@ const getRandomInteger = (min, max) => {
 }
 
 const populateEntriesTable = () => {
-    dropEntries()
+    return dropEntries()
     .then(() => findRowsCountForProductsSupermarketsOriginsFunction())
     .then(res => generator(...res.map(e => Number(e.rows[0].count))))
     .then(res => insertEntries(res))
