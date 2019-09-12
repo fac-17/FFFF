@@ -9,6 +9,6 @@ const sql = fs.readFileSync(buildLink).toString();
 
 const runBuild = cb => dbConnection.query(sql, (err, res) => {
     populateEntriesTable()
-    .then(resolve => cb(err, res));
+    .then(() => cb(err, res));
 });
 module.exports = runBuild;
