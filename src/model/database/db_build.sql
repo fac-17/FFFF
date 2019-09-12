@@ -64,22 +64,44 @@ VALUES
     ('Banana', 1),
     ('Potato', 2 ),
     ('Sausages', 3),
-    ('Apple', 1);
+    ('Apple', 1),
+    ('Broccoli',2),
+    ('Sweet Potato',2),
+    ('Spinach',2),
+    ('Mushroom',2),
+    ('Strawberries',1),
+    ('Orange',1),
+    ('Bacon',3),
+    ('Chicken',3);
 INSERT INTO supermarkets
     (name)
 VALUES
     ('Sainsburys'),
-    ('Tesco');
+    ('Tesco'),
+    ('Lidl'),
+    ('Aldi'),
+    ('Waitrose'),
+    ('M&S');
 INSERT INTO flags
     (emoji_code)
 VALUES
     ('U+1F1F7'),
-    ('U+1F1EE');
+    ('U+1F1EE'),
+    ('U+1F1EC'),
+    ('U+1F1F5'),
+    ('U+1F1EF'),
+    ('U+1F1EA');
 INSERT INTO origins
     (name, score, flag_id)
 VALUES
     ('Brazil', 4, 1),
-    ('Ireland', 2, 2);
+    ('Ireland', 2, 2),
+    ('Kent/UK',1,3),
+    ('Yorkshire/UK',2,3),
+    ('Harefordshire/UK',1,3),
+    ('Poland',3,4),
+    ('Japan',4,5),
+    ('Spain',3,6);
 INSERT INTO entries
     (product_id, supermarket_id, origin_id)
 VALUES
