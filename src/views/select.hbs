@@ -1,7 +1,14 @@
-<ul class = "itemList">
-    {{#each dummyData}}
-    <li>{{this}}</li>
+<ul class="item-list">
+    {{#each data}}
+    <li class="{{this.pname}}">{{this.pname}}, {{this.cname}} </li>
     {{/each}}
 </ul>
+<form action="/results" method="post" class="shopping-form">
+    <input type="text" name="product">
+    <input type="text" name="product">
+    <input type="submit">
+</form>
 
-{{!-- <h1>hello</h1> --}}
+<button class="add-apple">Add apple</button>
+
+<script src="js/shoppingSelection.js"></script>
