@@ -22,15 +22,16 @@ ORDER BY
 }
 exports.resultsArray=(productsIdArray)=>{
     const supermarkets={};
-    exports.resultsQuery(productsIdArray)
+    return exports.resultsQuery(productsIdArray)
     .then(res=>res.rows.forEach(row=>{
         if (!supermarkets[row.sname]) {
-            supermarkets[row.sname]={sname:row.sname,score:0}
+            supermarkets[row.sname]={sname:row.sname,score:Number(row.score)}
+        } else {
+            supermarkets[row.sname].score+=Number(row.score);
         }
-        return res;
     })).then(()=>
-        console.log(supermarkets)
+        Object.values(supermarkets)
+        .sort( (a,b) => a.score-b.score)
+        .map( (supermarket)=>({sname:supermarket.sname,score:supermarket.score/Object.keys(supermarkets).length}))
     ).catch(console.err)
 }
-
-exports.resultsArray([1,2,3,4]);
