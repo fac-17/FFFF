@@ -1,0 +1,14 @@
+$andys-mad-variable: 666px;
+$andys-mad-variables-mate: 8px;
+body {
+    font-size: $andys-mad-variable;
+}
+p {
+    font-size: $andys-mad-variables-mate;
+    color: red;
+}
+
+li {
+    color: blue;
+    font-size: $andys-mad-variable
+}
