@@ -31,9 +31,10 @@ exports.resultsArray=(productsIdArray)=>{
         } else {
             supermarkets[row.sname].score+=Number(row.score);
         }
+        console.log(row.score,row.sname,supermarkets);
     })).then(()=>
         Object.values(supermarkets)
         .sort( (a,b) => a.score-b.score)
-        .map( (supermarket)=>({sname:supermarket.sname,score:supermarket.score/Object.keys(supermarkets).length}))
+        .map( (supermarket)=>({sname:supermarket.sname,score:supermarket.score/productsIdArray.length}))
     ).catch(console.err)
 }
