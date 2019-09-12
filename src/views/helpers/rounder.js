@@ -1,0 +1,1 @@
+module.exports = num => num.toFixed(2);
