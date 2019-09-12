@@ -39,3 +39,14 @@ test('Check that the results route is working', t => {
             t.end();
         })
 })
+
+test('check that the itemsbysupermarket route is working', t => {
+    supertest(app)
+        .get('/itemsbysupermarket')
+        .expect(200)
+        .expect('Content-Type', /html/)
+        .end(err => {
+            t.error(err, '/itemsbysupermarket does work');
+            t.end();
+        })
+})
