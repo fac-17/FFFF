@@ -1,5 +1,12 @@
+const { findAllFoodItems } = require('../model/queries/findQueries');
+
 exports.get = (req, res) => {
-    // get from the db
-    const dummyData = ['banana', 'apple','orange'];
-    res.render("select", { dummyData});
+    findAllFoodItems((err, data) => {
+        if (err) {
+            console.log('error retreiving food items');
+        }
+        else {
+            res.render("select", { data });
+        }
+    })
 };
