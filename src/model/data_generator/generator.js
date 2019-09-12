@@ -5,8 +5,6 @@ const { insertEntries } = require('../queries/insertQueries');
 
 const generator = (productNum, supermarketNum, originNum) => {
     let a = [];
-    console.log("productNum", productNum);
-    console.log("supermarketNum", supermarketNum);
     for (let i=0;i<productNum;i++){
         for (let j=0;j<supermarketNum;j++){
             let entry = [i+1, j+1, getRandomInteger(1, originNum)];
