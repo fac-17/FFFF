@@ -20,6 +20,8 @@ ORDER BY
 
     return dbConnection.query(query);
 }
+
+// returns a Promise that resolves to sorted array with objects [{sname:"Tesco",score:2.3333},{sname:"Sainsbury",score:3.5}]
 exports.resultsArray=(productsIdArray)=>{
     const supermarkets={};
     return exports.resultsQuery(productsIdArray)
