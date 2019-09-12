@@ -1,4 +1,4 @@
-exports.get = (req,res)=>{
-    res.render("home");
+exports.get = (req, res) => {
+    res.render("home", { noBack: true });
 }
 
