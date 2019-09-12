@@ -1,5 +1,5 @@
 const test = require('tape');
-const { generator, getRandomInteger } = require('../model/data_generator/generator');
+const { generator, getRandomInteger, findRowsCountForProductsSupermarketsOriginsFunction } = require('../model/data_generator/generator');
 
 test('Check that we\'re ready for gen testing', t => {
     t.assert(true, true, 'Must return true');
