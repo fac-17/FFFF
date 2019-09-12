@@ -27,12 +27,12 @@ test("Check findAllFoodItems queries correctly", t => {
             t.end();
         } else {
             const expected = [
-                { pname: 'Banana', cname: 'Fruit' },
-                { pname: 'Potato', cname: 'Vegetables' },
-                { pname: 'Sausages', cname: 'Meat' },
-                { pname: 'Apple', cname: 'Fruit' }
+                { product_id:1,pname: 'Banana', cname: 'Fruit' },
+                { product_id:2,pname: 'Potato', cname: 'Vegetables' },
+                { product_id:3,pname: 'Sausages', cname: 'Meat' },
+                { product_id:4,pname: 'Apple', cname: 'Fruit' }
             ];
-            t.deepEquals(res, expected);
+            t.deepEquals(res.slice(0,4), expected);
             t.end();
         }
     })
@@ -42,12 +42,12 @@ test("Check findAllFoodItemsPromise queries correctly", t => {
     findAllFoodItemsPromise
         .then(res => {
             const expected = [
-                { pname: 'Banana', cname: 'Fruit' },
-                { pname: 'Potato', cname: 'Vegetables' },
-                { pname: 'Sausages', cname: 'Meat' },
-                { pname: 'Apple', cname: 'Fruit' }
+                { product_id:1,pname: 'Banana', cname: 'Fruit' },
+                { product_id:2,pname: 'Potato', cname: 'Vegetables' },
+                { product_id:3,pname: 'Sausages', cname: 'Meat' },
+                { product_id:4,pname: 'Apple', cname: 'Fruit' }
             ];
-            t.deepEquals(res, expected);
+            t.deepEquals(res.slice(0,4), expected);
             t.end();
         })
         .catch(err => {
