@@ -33,7 +33,6 @@ test('Check that the results route is working', t => {
     supertest(app)
         .post('/results')
         .send({name: 'john'})
-        .set('Accept', 'application/json')
         .expect(200)
         .expect('Content-Type', /html/)
         .end((err) => {
