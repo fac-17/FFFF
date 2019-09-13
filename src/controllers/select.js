@@ -6,7 +6,7 @@ exports.get = (req, res) => {
             console.log('error retreiving food items');
         }
         else {
-            res.render("select", { data });
+            res.render("select", { data, back:"/" });
         }
     })
 };
