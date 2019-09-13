@@ -1,4 +1,4 @@
 exports.get = (req, res) => {
-    res.render("home", { noBack: true });
+    res.render("home", { home: true });
 }
 
