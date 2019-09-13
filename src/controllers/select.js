@@ -8,6 +8,7 @@ exports.get = (req, res) => {
         else {
             res.render("select", {
                 data,
+                back: "/",
                 cssPath: '/css/select.css',
                 pageTitle: 'Select Shopping Items'
             });
