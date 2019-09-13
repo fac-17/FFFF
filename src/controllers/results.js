@@ -7,6 +7,6 @@ exports.post = (req, res) => {
     resultsArray(productIds)
         .then(result => {
             console.log(result)
-            res.render("results", { result });
+            res.render("results", { result, back:"/select" });
         });
 };
