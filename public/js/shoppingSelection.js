@@ -18,15 +18,17 @@ allItems.forEach(elem => {
             listItem.dataset.name = e.currentTarget.dataset.name;
             listItem.innerText = e.currentTarget.dataset.name;
             shoppingList.appendChild(listItem);
+
         } else {
             const elemToDelete = document.querySelector('.input' + e.currentTarget.dataset.value);
             elemToDelete.parentNode.removeChild(elemToDelete);
             const indexToDelete = selected.indexOf(e.currentTarget.dataset.value);
             selected.splice(indexToDelete, 1);
-
-
+            
+            
             const listItemDelete = document.querySelector(".shopping-list [data-name='"+e.currentTarget.dataset.name+"']")
             listItemDelete.parentNode.removeChild(listItemDelete);
         }
+        e.currentTarget.classList.toggle("selected-item")
     });
 })
