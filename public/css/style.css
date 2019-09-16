@@ -1,11 +1,6 @@
-body {
-  font-size: 20px;
-  color: yellow; }
-
-p {
-  font-size: 8px;
-  color: blue; }
-
-li {
-  color: orange;
-  font-size: 20px; }
+@import url("https://fonts.googleapis.com/css?family=Raleway&display=swap");
+html {
+  font-family: "Raleway", sans-serif;
+  font-size: 25px;
+  color: #222222;
+  background-color: #f5f3f1; }
