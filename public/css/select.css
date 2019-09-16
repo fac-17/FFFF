@@ -1,2 +1,5 @@
 body {
   background-color: green; }
+
+.hidden {
+  visibility: hidden; }
