@@ -1,7 +1,7 @@
 const { resultsArray } = require('../model/queries/resultsQuery');
-exports.post = (req, res) => {
-
-    const correctArray = Array.isArray(req.body.product) ? req.body.product : [req.body.product]; 
+exports.get = (req, res) => {
+    console.log(req.query)
+    const correctArray = Array.isArray(req.query.product) ? req.query.product : [req.query.product]; 
     const productIds = correctArray.map(Number);
     console.log(productIds);                                                        
     resultsArray(productIds)
