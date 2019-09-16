@@ -6,5 +6,6 @@ exports.get = (req, res) => {
     query(productIds,Number(req.query.supermarket)).then(result=>{
         res.render('itemsbysupermarket', {result:result.rows,
         supermarket:result.rows[0].sname});
+        console.log(result.rows)
     });
 }
