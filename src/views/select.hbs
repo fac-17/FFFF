@@ -1,7 +1,7 @@
 <ul class="item-list">
     {{#each data}}
     <li data-name="{{this.pname}}" data-value="{{this.product_id}}">
-        <img src="assets/{{imagenamer this.pname}}.jpg">
+        <img class="product-img" src="assets/{{imagenamer this.pname}}.jpg">
         {{this.pname}}, {{this.cname}}
          </li>
     {{/each}}

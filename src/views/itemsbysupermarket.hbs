@@ -1,5 +1,11 @@
+<h1>
+    {{supermarket}}
+</h1>
 <ul> 
     {{#each result}}
-    <li>{{{emoji_code}}}</li>
+    <img class="product-img" src="assets/{{imagenamer pname}}.jpg">
+    <p>Product: {{{pname}}}</p>
+    <p>Origin: {{{emoji_code}}}</p>
+    <p>Score: {{{score}}}</p>
     {{/each}}
 </ul>
