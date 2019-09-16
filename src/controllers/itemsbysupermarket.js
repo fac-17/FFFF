@@ -1,3 +1,9 @@
 exports.get = (req, res) => {
-    res.render('itemsbysupermarket');
+    let productIds = req.query.product;
+    productsIds = typeof productIds === 'string' ? productIds = [productIds]: productIds;
+    productsIds = productsIds.map(Number);
+    res.render('itemsbysupermarket', {
+        productIds,
+        supermarket: Number(req.query.supermarket)
+    });
 }
