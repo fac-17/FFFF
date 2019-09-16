@@ -1,5 +1,5 @@
 <ul class = "resultsList">
     {{#each result}}
-    <li>{{this.sname }} {{rounder this.score}}</li>
+    <li><a href="/itemsbysupermarket?{{../queryString}}&supermarket={{this.supermarket_id}}">{{this.sname }}  {{rounder this.score}}</a></li>
     {{/each}}
 </ul>
