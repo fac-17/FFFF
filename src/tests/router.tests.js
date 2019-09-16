@@ -39,3 +39,25 @@ test('Check that the results route is working', t => {
             t.end();
         })
 })
+
+test('Check 404 route works', t => {
+    supertest(app)
+        .get('/jikuhygtf')
+        .expect(404)
+        .expect('Content-Type', /html/)
+        .end((err) => {
+            t.error(err, '404 route works');
+            t.end();
+        });
+});
+
+test('Check 500 route works', t => {
+    supertest(app)
+    .get('/dummy')
+        .expect(500)
+        .expect('Content-Type', /html/)
+        .end((err) => {
+            t.error(err, '500 route works');
+            t.end();
+        });
+})
