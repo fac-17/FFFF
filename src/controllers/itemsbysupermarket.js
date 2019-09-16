@@ -1,9 +1,9 @@
+const query=require('../model/queries/breakdownQuery').breakdownQuery
 exports.get = (req, res) => {
     let productIds = req.query.product;
-    productsIds = typeof productIds === 'string' ? productIds = [productIds]: productIds;
-    productsIds = productsIds.map(Number);
-    res.render('itemsbysupermarket', {
-        productIds,
-        supermarket: Number(req.query.supermarket)
+    productIds = typeof productIds === 'string' ? productIds = [productIds]: productIds;
+    productIds = productIds.map(Number);
+    query(productIds,Number(req.query.supermarket)).then(result=>{
+        res.render('itemsbysupermarket', {result:result.rows});
     });
 }
