@@ -85,12 +85,12 @@ VALUES
 INSERT INTO flags
     (emoji_code)
 VALUES
+    ('&#x1F1E7;&#x1F1F7;'),
+    ('&#x1F1EE;&#x1F1EA;'),
     ('&#x1F1EC;&#x1F1E7;'),
-    ('&#x1F1EC;&#x1F1E7;'),
-    ('&#x1F1EC;&#x1F1E7;'),
-    ('&#x1F1EC;&#x1F1E7;'),
-    ('&#x1F1EC;&#x1F1E7;'),
-    ('&#x1F1EC;&#x1F1E7;');
+    ('&#x1F1F5;&#x1F1F1;'),
+    ('&#x1F1EF;&#x1F1F5;'),
+    ('&#x1F1EA;&#x1F1F8;');
 INSERT INTO origins
     (name, score, flag_id)
 VALUES
