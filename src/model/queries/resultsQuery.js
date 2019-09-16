@@ -4,6 +4,7 @@ exports.resultsQuery = (productsIdArray)=>{
     const query=`SELECT
     products.name pname,
     supermarkets.name sname,
+    supermarket_id,
     origins.name oname,
     origins.score,
     flags.emoji_code
@@ -27,7 +28,7 @@ exports.resultsArray=(productsIdArray)=>{
     return exports.resultsQuery(productsIdArray)
     .then(res=>res.rows.forEach(row=>{
         if (!supermarkets[row.sname]) {
-            supermarkets[row.sname]={sname:row.sname,score:Number(row.score)}
+            supermarkets[row.sname]={sname:row.sname,score:Number(row.score),supermarket_id:row.supermarket_id}
         } else {
             supermarkets[row.sname].score+=Number(row.score);
         }
@@ -35,6 +36,6 @@ exports.resultsArray=(productsIdArray)=>{
     })).then(()=>
         Object.values(supermarkets)
         .sort( (a,b) => a.score-b.score)
-        .map( (supermarket)=>({sname:supermarket.sname,score:supermarket.score/productsIdArray.length}))
+        .map( (supermarket)=>({supermarket_id:supermarket.supermarket_id,sname:supermarket.sname,score:supermarket.score/productsIdArray.length}))
     ).catch(console.err)
 }
