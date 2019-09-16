@@ -10,6 +10,13 @@ router.get('/', home.get);
 router.get('/select', select.get);
 router.get('/results', results.get);
 router.get('/itemsbysupermarket', itemsbysupermarket.get);
+
+
+//test 500 route in test mode only
+if (process.env.NODE_ENV === "test") {
+    const dummy = require('./dummy');
+    router.get('/dummy', dummy.get);
+}
 router.use(error.client);
 router.use(error.server);
 

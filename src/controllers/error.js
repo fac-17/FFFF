@@ -5,8 +5,7 @@ exports.client = (req, res) => {
   });
 };
 
-exports.server = (err, req, res, next) => {
-    console.log('500');
+exports.server = (err, req, res) => {
   res.status(500).render('error', {
     statusCode: 500,
     errorMessage: 'Internal server error',
