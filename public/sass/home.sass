@@ -1,37 +1,96 @@
-.container-home
-    display: grid
-    grid-template-columns: repeat(6, 1fr)
-    grid-template-rows: repeat (12, 1fr)
-    border: 2px solid #f76707
+$img-width: 700px
 
-.pumpkin-home
-    grid-column: 1/7
-    grid-row: 1/2
-    min-height: 100%
-    width: 100%
+html, .container-home
+    margin: 0 auto
+    padding: 0 auto
+    scroll-behavior: smooth
+    border: none
+    overflow-x: hidden
+    display: flex
+    flex-direction: column
+    justify-content: center
+    text-align: center
+    align-content: center
+    align-items: center
+
+.header-img
+    width: 100vw
+
+.header-txt, p, body, html
+    margin: 0px 0px
+    padding: 0px 0px
+
+.step
+    background-color: rgb(0, 180, 149)
+    border-radius: 50%
+    width: 50px
+    height: 50px
+    color: white
+    text-align: center
+    vertical-align: middle
+    line-height: 50px
+
+.wrapper2, .wrapper4, .wrapper6
+    display: grid
+    grid-template-columns: 1fr 9fr
+    padding: 30px 30px
+    justify-content: center
+    text-align: center
+    align-content: center
+    align-items: center
+
+.header-img
+    max-width: 100%
+    max-height: auto
+
+.header-txt
+    right: 30%
+    top: 5%
+    z-index: 1
 
 .page-header
     color: white
-    grid-column: 1/7
-    grid-row: 1/2
-    display: flex
-    align-items: flex-start
     justify-content: center
+    text-align: center
 
-.first-h1
-    grid-column: 2/6
-    grid-row: 3/4
+.wrapper1
+    margin-top: 10px
+    width: $img-width
 
-.second-h1
-    background-color: pink
-    grid-column: 2/6
-    grid-row: 5/6
+.wrapper2
+    margin-top: 10px
 
-.third-h1
-    background-color: yellow
-    grid-column: 2/6
-    grid-row: 7/8
+.wrapper3
+    margin-top: 10px
+    width: $img-width
 
-.start-button-container
-    grid-column: 4/5
-    grid-row: 11/12
+.wrapper4
+    margin-top: 10px
+
+.wrapper5
+    margin-top: 10px
+    width: $img-width
+
+.wrapper6
+    margin-top: 10px
+
+.wrapper7
+    margin-top: 10px
+    text-align: center
+    align-self: center
+
+.start-button
+    width: 300px
+    height: 60px
+    text-transform: uppercase
+    margin: 20px 20px
+
+@media only screen and (max-width: 1000px)
+    body
+        font-size: 18px
+
+    .wrapper1, .wrapper3, .wrapper5
+        max-width: 300px
+
+    .header-img
+        max-width: 100%
