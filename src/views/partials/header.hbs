@@ -1,9 +1,11 @@
 <header class="navbar">
-    <ul>
-        <li><a href='/'>Home</a></li>
+  {{#unless home}}
+  <ul>
+    <li><a href='/'>Home</a></li>
+    {{/unless}}
 
-{{#if back}}
-        <li><a href={{back}}> Back</a></li>
-{{/if}}
-    </ul>
+    {{#if back}}
+    <li><a href={{back}}> Back</a></li>
+    {{/if}}
+  </ul>
 </header>
