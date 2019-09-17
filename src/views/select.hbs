@@ -1,3 +1,4 @@
+<h2 class="select-items-title">Select your items</h2>
 <ul class="item-list">
     {{#each data}}
     <li class="product" data-name="{{this.pname}}" data-value="{{this.product_id}}">
@@ -6,7 +7,8 @@
     </li>
     {{/each}}
 </ul>
-<div class="shopping-list--wrapper">
+<div class="shopping-list--wrapper hidden">
+    <h2>Your shopping list</h2>
     <ul class="shopping-list">
     </ul>
 </div>
