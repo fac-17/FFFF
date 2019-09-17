@@ -3,6 +3,7 @@ const app = require('../app');
 
 test('Check results page is rendering handlebars correctly', t => {
     app.render('results', (err, html) => {
+        console.log({html},{err});
         const actualStart = html.slice(0, 15);
         const expectedStart = '<!DOCTYPE html>';
         t.equal(actualStart, expectedStart);
