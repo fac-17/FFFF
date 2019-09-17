@@ -20,8 +20,8 @@
   .product .product-name {
     text-align: center; }
   .product:hover {
-    border: 2px solid green;
+    border: 2px solid #315350;
     transform: scale(1.05); }
 
 .selected-item {
-  border: 2px solid green; }
+  border: 2px solid #315350; }
