@@ -38,5 +38,8 @@ a {
   color: inherit; }
 
 input[type="submit"], button {
-  background: none;
+  background: #00b495;
+  color: #f5f3f1;
+  font-weight: bold;
+  padding: 0.5rem 4rem;
   border: none; }
