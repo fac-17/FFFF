@@ -3,5 +3,5 @@ module.exports ={
     imagenamer:require('./imagenamer'),
     scorer:require('./scorer'),
     labels:require('./labels'),
-    supermarket:require('./supermarket')
+    getWinnerName:require('./getWinnerName')
 }
