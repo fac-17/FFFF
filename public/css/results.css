@@ -1,6 +1,15 @@
 .resultsList {
-  display: flex;
-  flex-direction: column; }
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); }
   .resultsList li {
     margin-top: 10px;
-    font-size: 25px; }
+    font-size: 18px; }
+  .resultsList .label {
+    font-size: 8px; }
+  .resultsList .breakdown {
+    background-color: #47C954;
+    text-align: center;
+    padding: 5px 5px;
+    font-size: 8px;
+    line-height: 30%;
+    text-transform: uppercase; }

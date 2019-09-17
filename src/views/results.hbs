@@ -1,5 +1,17 @@
-<ol class = "resultsList">
+<p>For your groceries, {{supermarket result}} has the most locally sourced produce </p>
+<ol class="resultsList">
     {{#each result}}
-    <li><a href="/itemsbysupermarket?{{../queryString}}&supermarket={{this.supermarket_id}}">{{this.sname }}  {{rounder this.score}}</a></li>
+    <li><a href="/itemsbysupermarket?{{../queryString}}&supermarket={{this.supermarket_id}}">{{this.sname }}
+            {{rounder this.score}}</a>
+        <p class="breakdown"><a href="/itemsbysupermarket?{{../queryString}}&supermarket={{this.supermarket_id}}">
+                <br>
+                View breakdown</a>
+        </p>
+    </li>
+    <label class="label">
+        <img src="assets/{{scorer this.score}}.png">
+        <br>
+        {{labels this.score}}
+    </label>
     {{/each}}
 </ol>
