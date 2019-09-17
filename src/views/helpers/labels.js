@@ -1,4 +1,4 @@
-module.exports = scorer = score => {
+module.exports = score => {
     switch(Math.round(score)) {
         case 1: return "Not sourced locally at all"
         case 2: return "Mostly not sourced locally"

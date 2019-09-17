@@ -1,4 +1,4 @@
-module.exports = scorer = score => {
+module.exports = score => {
     switch(Math.round(score)) {
         case 1: return "plane"
         case 2: return "lorry"
