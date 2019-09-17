@@ -1,11 +1,12 @@
+{{#unless home}}
 <header class="navbar">
-  {{#unless home}}
   <ul>
-    <li><a href='/'>Home</a></li>
-    {{/unless}}
-
     {{#if back}}
-    <li><a href={{back}}> Back</a></li>
+    <li><a href={{back}} class="navbar-back"> Back</a></li>
     {{/if}}
+    <li><a href='/' class="navbar-logo">Logo</a></li>
+    <li><a href='/' class="navbar-back">Home </a></li>
+
   </ul>
 </header>
+{{/unless}}
