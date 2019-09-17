@@ -16,6 +16,14 @@ h3 {
 .navbar {
   background-color: #00b495;
   color: #f5f3f1; }
+  .navbar ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 1.5rem; }
+    .navbar ul .navbar-logo {
+      font-size: 1.25rem;
+      text-transform: uppercase; }
 
 ul {
   list-style-type: none;
