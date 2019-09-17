@@ -1,2 +1,19 @@
 .hidden {
   visibility: hidden; }
+
+.item-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+  justify-content: center; }
+
+.product {
+  background-color: white;
+  margin: 1px;
+  width: 110px; }
+  .product .product-img {
+    height: 90px;
+    width: 100%;
+    object-fit: contain; }
+  .product .product-name {
+    text-align: center; }
