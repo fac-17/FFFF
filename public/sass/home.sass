@@ -1,11 +1,11 @@
-$img-width: 300px
- 
+$img-width: 700px
+
 html, .container-home
-    margin: 0 auto;
-    padding: 0 auto;
-    scroll-behavior: smooth;
-    border: none;
-    overflow-x: hidden;
+    margin: 0 auto
+    padding: 0 auto
+    scroll-behavior: smooth
+    border: none
+    overflow-x: hidden
     display: flex
     flex-direction: column
     justify-content: center
@@ -13,18 +13,6 @@ html, .container-home
     align-content: center
     align-items: center
 
-
-// .container-home
-//     display: flex
-//     flex-direction: column
-//     justify-content: center
-//     text-align: center
-//     align-content: center
-//     align-items: center
-    // display: grid
-    // grid-gap: 10px 10px
-    // grid-template-columns: repeat(6, 1fr)
-    // grid-template-rows: repeat(5, 1fr)
 .header-img
     width: 100vw
 
@@ -42,81 +30,52 @@ html, .container-home
     vertical-align: middle
     line-height: 50px
 
-
 .wrapper2, .wrapper4, .wrapper6
     display: grid
     grid-template-columns: 1fr 9fr
-    padding: 30px 30px 
+    padding: 30px 30px
     justify-content: center
     text-align: center
     align-content: center
     align-items: center
 
-.wrapper0
-    // grid-column: 1/7
-    // grid-row: 1/2
-    // position: relative
-    // min-height: 100%
-    // width: 100%
+.header-img
+    max-width: 100%
+    max-height: auto
 
-    .header-img
-        max-width: 100%
-        max-height: auto
-        // position: absolute
-
-    .header-txt
-        // position: absolute
-        right: 30%
-        top: 5%
-        z-index: 1
+.header-txt
+    right: 30%
+    top: 5%
+    z-index: 1
 
 .page-header
     color: white
-    // grid-column: 1/7
-    // grid-row: 1/2
-    // display: flex
-    // align-items: flex-start
     justify-content: center
     text-align: center
 
-// media query tablet
 .wrapper1
     margin-top: 10px
-    // grid-column: 2/4
-    // grid-row: 2/4
-    max-width: $img-width
+    width: $img-width
 
 .wrapper2
     margin-top: 10px
-    // grid-column: 4/6
-    // grid-row: 2/4  
 
 .wrapper3
     margin-top: 10px
-    // grid-column: 4/6
-    // grid-row: 3/4
-    max-width: $img-width
+    width: $img-width
 
 .wrapper4
     margin-top: 10px
-    // grid-column: 2/4
-    // grid-row: 3/4
 
 .wrapper5
     margin-top: 10px
-    // grid-column: 2/4
-    // grid-row: 4/5
-    max-wigth: $img-width
+    width: $img-width
 
 .wrapper6
     margin-top: 10px
-    // grid-column: 4/6
-    // grid-row: 4/5
 
 .wrapper7
     margin-top: 10px
-    // grid-column: 3/5
-    // grid-row: 5/6
     text-align: center
     align-self: center
 
@@ -125,36 +84,10 @@ html, .container-home
     height: 60px
     text-transform: uppercase
     margin: 20px 20px
-    
-// .first-h1
-//     grid-column: 2/6
-//     grid-row: 3/4
-
-// .second-h1
-//     background-color: pink
-//     grid-column: 2/6
-//     grid-row: 5/6
-
-// .third-h1
-//     background-color: yellow
-//     grid-column: 2/6
-//     grid-row: 7/8
-
-// .start-button-container
-//     grid-column: 4/5
-//     grid-row: 11/12
-
 
 @media only screen and (max-width: 1000px)
     body
         font-size: 18px
-    .container-home
-        display: flex
-        flex-direction: column
-        justify-content: center
-        text-align: center
-        align-content: center
-        align-items: center
 
     .wrapper1, .wrapper3, .wrapper5
         max-width: 300px
