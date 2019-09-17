@@ -1,2 +1,27 @@
 .hidden {
   visibility: hidden; }
+
+.item-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+  justify-content: center; }
+
+.product {
+  background-color: white;
+  border: 2px solid white;
+  margin: 2px;
+  width: 110px;
+  opacity: 1; }
+  .product .product-img {
+    height: 90px;
+    width: 100%;
+    object-fit: contain; }
+  .product .product-name {
+    text-align: center; }
+  .product:hover {
+    border: 2px solid #315350;
+    transform: scale(1.05); }
+
+.selected-item {
+  border: 2px solid #315350; }

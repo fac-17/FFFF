@@ -1,4 +1,29 @@
 
-
 .hidden
     visibility: hidden
+
+.item-list
+    display: flex
+    flex-wrap: wrap
+    align-content: space-between
+    justify-content: center
+
+.product
+    background-color: white
+    border: 2px solid white
+    margin: 2px
+    width: 110px
+    // height: 110px
+    opacity: 1
+    .product-img
+        height: 90px
+        width: 100%
+        object-fit: contain
+    .product-name
+        text-align: center
+    &:hover
+        border: 2px solid rgb(49, 83, 80)
+        transform: scale(1.05)
+
+.selected-item
+    border: 2px solid rgb(49, 83, 80)
