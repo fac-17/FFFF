@@ -22,6 +22,9 @@
   .product:hover {
     transform: scale(1.05); }
 
+.select-items-title {
+  text-align: center; }
+
 .selected-item {
   border: 2px solid #315350; }
 
@@ -29,7 +32,8 @@
   background: #dae4d5;
   margin: 1rem auto;
   padding: 1rem;
-  max-width: 70%;
+  width: 70%;
+  max-width: 400px;
   text-align: center;
   box-shadow: 1px 1px 2px;
   transform: rotate(2deg); }
