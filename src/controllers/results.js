@@ -12,7 +12,7 @@ exports.get = (req, res) => {
 
         resultsArray(productIds)
             .then(result => {
-                res.render("results", { result, queryString, back: "/select" });
+                res.render("results", { result, queryString, back: "/select", cssPath: '/css/results.css' });
             });
     }
 };
