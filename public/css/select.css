@@ -17,3 +17,5 @@
     object-fit: contain; }
   .product .product-name {
     text-align: center; }
+  .product:hover {
+    opacity: 0.5; }
