@@ -1,17 +1,21 @@
-<p>For your groceries, {{supermarket result}} has the most locally sourced produce </p>
+<p class="message">For your groceries, {{supermarket result}} has the most locally sourced produce </p>
 <ol class="resultsList">
     {{#each result}}
-    <li><a href="/itemsbysupermarket?{{../queryString}}&supermarket={{this.supermarket_id}}">{{this.sname }}
-            {{rounder this.score}}</a>
-        <p class="breakdown"><a href="/itemsbysupermarket?{{../queryString}}&supermarket={{this.supermarket_id}}">
-                <br>
-                View breakdown</a>
+    <li>
+        <a  href="/itemsbysupermarket?{{../queryString}}&supermarket={{this.supermarket_id}}">
+            {{this.sname }}
+            {{rounder this.score}}
+        </a>
+        <a class="link" href="/itemsbysupermarket?{{../queryString}}&supermarket={{this.supermarket_id}}">
+            <p class="breakdown">View breakdown
+        </a>
+            <br>
         </p>
     </li>
-    <label class="label">
+    <p class="label">
         <img src="assets/{{scorer this.score}}.png">
         <br>
         {{labels this.score}}
-    </label>
+    </p>
     {{/each}}
 </ol>
