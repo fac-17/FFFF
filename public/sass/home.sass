@@ -1,70 +1,128 @@
-.container-home
+$img-width: 300px
+ 
+html, .container-home
+    margin: 0 auto;
+    padding: 0 auto;
+    scroll-behavior: smooth;
+    border: none;
+    overflow-x: hidden;
+    display: flex
+    flex-direction: column
+    justify-content: center
+    text-align: center
+    align-content: center
+    align-items: center
+
+
+// .container-home
+//     display: flex
+//     flex-direction: column
+//     justify-content: center
+//     text-align: center
+//     align-content: center
+//     align-items: center
+    // display: grid
+    // grid-gap: 10px 10px
+    // grid-template-columns: repeat(6, 1fr)
+    // grid-template-rows: repeat(5, 1fr)
+.header-img
+    width: 100vw
+
+.header-txt, p, body, html
+    margin: 0px 0px
+    padding: 0px 0px
+
+.step
+    background-color: green
+    border-radius: 50%
+    width: 50px
+    height: 50px
+    color: white
+
+
+.wrapper2, .wrapper4, .wrapper6
     display: grid
-    grid-gap: 10px 10px
-    grid-template-columns: repeat(6, 1fr)
-    grid-template-rows: repeat(5, 1fr)
-    border: 2px solid #f76707
+    grid-template-columns: 1fr 9fr
+    padding: 30px 30px 
+    justify-content: center
+    text-align: center
+    align-content: center
+    align-items: center
 
 .wrapper0
-    grid-column: 1/7
-    grid-row: 1/2
-    position: relative
+    // grid-column: 1/7
+    // grid-row: 1/2
+    // position: relative
     // min-height: 100%
     // width: 100%
 
     .header-img
         max-width: 100%
         max-height: auto
-        position: absolute
+        // position: absolute
 
     .header-txt
-        position: absolute
+        // position: absolute
         right: 30%
         top: 5%
         z-index: 1
 
 .page-header
     color: white
-    grid-column: 1/7
-    grid-row: 1/2
+    // grid-column: 1/7
+    // grid-row: 1/2
     // display: flex
     // align-items: flex-start
     justify-content: center
     text-align: center
 
 // media query tablet
-// media only screen and (max-width: 1000px)
 .wrapper1
-    grid-column: 2/4
-    grid-row: 2/4
+    margin-top: 10px
+    // grid-column: 2/4
+    // grid-row: 2/4
+    max-wigth: $img-width
+
 .wrapper2
-    grid-column: 4/6
-    grid-row: 2/4
-// img
-//     max-height: 200px
+    margin-top: 10px
+    // grid-column: 4/6
+    // grid-row: 2/4  
+
 .wrapper3
-    grid-column: 4/6
-    grid-row: 3/4
+    margin-top: 10px
+    // grid-column: 4/6
+    // grid-row: 3/4
+    max-wigth: $img-width
+
 .wrapper4
-    grid-column: 2/4
-    grid-row: 3/4
+    margin-top: 10px
+    // grid-column: 2/4
+    // grid-row: 3/4
 
 .wrapper5
-    grid-column: 2/4
-    grid-row: 4/5
+    margin-top: 10px
+    // grid-column: 2/4
+    // grid-row: 4/5
+    max-wigth: $img-width
 
 .wrapper6
-    grid-column: 4/6
-    grid-row: 4/5
+    margin-top: 10px
+    // grid-column: 4/6
+    // grid-row: 4/5
 
 .wrapper7
-    grid-column: 3/5
-    grid-row: 5/6
+    margin-top: 10px
+    // grid-column: 3/5
+    // grid-row: 5/6
     text-align: center
     align-self: center
 
 .start-button
-    padding: 100px
+    width: 300px
+    height: 60px
+    text-transform: uppercase
+    margin: 20px 20px
+    
 // .first-h1
 //     grid-column: 2/6
 //     grid-row: 3/4
@@ -82,3 +140,21 @@
 // .start-button-container
 //     grid-column: 4/5
 //     grid-row: 11/12
+
+
+@media only screen and (max-width: 1000px)
+    body
+        font-size: 18px
+    .container-home
+        display: flex
+        flex-direction: column
+        justify-content: center
+        text-align: center
+        align-content: center
+        align-items: center
+
+    .wrapper1, .wrapper3, .wrapper5
+        max-width: 300px
+
+    .header-img
+        max-width: 100%
