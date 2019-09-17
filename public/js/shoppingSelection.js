@@ -2,12 +2,15 @@ const shoppingForm = document.querySelector('.shopping-form');
 const allItems = document.querySelector('.item-list').childNodes;
 const selected = [];
 const submitButton = document.querySelector('.submit-button');
+const shoppingList = document.querySelector(".shopping-list");
+const shoppingListWrapper = document.querySelector(".shopping-list--wrapper")
 
 allItems.forEach(elem => {
     elem.addEventListener('click', (e) => {
         if (!selected.includes(e.currentTarget.dataset.value)) {
             if (selected.length === 0) {
                 submitButton.classList.remove("hidden");
+                shoppingListWrapper.classList.remove("hidden")
             }
             selected.push(e.currentTarget.dataset.value);
             const newInput = document.createElement('input');
@@ -17,7 +20,6 @@ allItems.forEach(elem => {
             newInput.value = e.currentTarget.dataset.value;
             shoppingForm.appendChild(newInput)
 
-            const shoppingList = document.querySelector(".shopping-list");
             const listItem = document.createElement("li");
             listItem.dataset.name = e.currentTarget.dataset.name;
             listItem.innerText = e.currentTarget.dataset.name;
@@ -26,6 +28,7 @@ allItems.forEach(elem => {
         } else {
             if (selected.length === 1) {
                 submitButton.classList.add("hidden");
+                shoppingListWrapper.classList.add("hidden");
             }
             const elemToDelete = document.querySelector('.input' + e.currentTarget.dataset.value);
             elemToDelete.parentNode.removeChild(elemToDelete);

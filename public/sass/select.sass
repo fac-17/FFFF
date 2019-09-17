@@ -1,4 +1,4 @@
-
+@import "_variables"
 .hidden
     visibility: hidden
 
@@ -22,8 +22,29 @@
     .product-name
         text-align: center
     &:hover
-        border: 2px solid rgb(49, 83, 80)
+        // border: 2px solid $dark-green
         transform: scale(1.05)
 
 .selected-item
-    border: 2px solid rgb(49, 83, 80)
+    border: 2px solid $dark-green
+
+.shopping-list--wrapper
+    background: $pale-green
+    margin: 1rem auto
+    padding: 1rem
+    max-width: 70%
+    text-align: center
+    box-shadow: 1px 1px 2px
+    transform: rotate(2deg);
+
+    li
+        margin: 0.5rem auto
+    
+    h2
+        margin: 0.5rem
+
+.shopping-form 
+    display: flex
+    justify-content: center
+.submit-button 
+    
