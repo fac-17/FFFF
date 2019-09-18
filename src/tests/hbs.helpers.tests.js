@@ -18,22 +18,50 @@ test("Check if imagenamer provides good filename for White Cabbage",t=>{
     t.end();
 })
 test("Check if labels provides a string for a score", t=>{
-    t.equals(helpers.labels(1), 'Not sourced locally at all', '1 returns the string Not sourced locally at all');
-    t.end();
-})
-test("Check if labels provides the correct string for score", t=>{
-    t.equals(helpers.labels(4), 'Locally sourced', '4 returns the string: Locally sourced');
+    t.equals(helpers.labels(4), 'Not sourced locally at all', '4 returns the string Not sourced locally at all');
     t.end();
 })
 test("Checking another of the labels scores", t=>{
-    t.equals(helpers.labels(3), 'Mostly sourced locally', '3 returns the string: Mostly sourced locally ')
+    t.equals(helpers.labels(3), 'Mostly not sourced locally', '3 returns the string: Mostly not sourced locally')
+    t.end();
+})
+test("Checking another of the labels scores", t=>{
+    t.equals(helpers.labels(2), 'Mostly sourced locally', '2 returns the string: Mostly sourced locally ')
+    t.end();
+})
+test("Check if labels provides the correct string for score", t=>{
+    t.equals(helpers.labels(1), 'Locally sourced', '1 returns the string: Locally sourced');
     t.end();
 })
 test("Check if scorer number returns a string", t=> {
-    t.equals(helpers.scorer(1), 'plane', '1 returns plane');
+    t.equals(helpers.scorer(4), 'plane', '4 returns plane');
+    t.end();
+})
+test("Check if scorer number returns a string", t=> {
+    t.equals(helpers.scorer(3), 'lorry', '3 returns lorry');
     t.end();
 })
 test("Check if scorer number returns the correct string", t=> {
-    t.equals(helpers.scorer(3), 'car', '3 returns car');
+    t.equals(helpers.scorer(2), 'car', '2 returns car');
+    t.end();
+})
+test("Check if scorer number returns the correct string", t=> {
+    t.equals(helpers.scorer(1), 'bike', '1 returns bike');
+    t.end();
+})
+test('Check color function returns relevant color', t => {
+    t.equals(helpers.color(4), "#FA0000", "4 returns #FA0000");
+    t.end();
+})
+test('Check color function returns relevant color', t => {
+    t.equals(helpers.color(3), "#FB8800", "3 returns #FB8800");
+    t.end();
+})
+test('Check color function returns relevant color', t => {
+    t.equals(helpers.color(2), "#F5FA00", "2 returns #F5FA00");
+    t.end();
+})
+test('Check color function returns relevant color', t => {
+    t.equals(helpers.color(1), "#38F706", "1 returns #38F706");
     t.end();
 })
