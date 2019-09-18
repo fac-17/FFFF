@@ -83,6 +83,9 @@ html, .container-home {
   text-transform: uppercase;
   margin: 20px 20px; }
 
+.button {
+  margin: 2rem auto; }
+
 @media only screen and (max-width: 1000px) {
   body {
     font-size: 18px; }
