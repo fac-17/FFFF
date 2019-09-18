@@ -13,7 +13,9 @@
 .ranking-name {
   background-color: #315350;
   padding: 0.5rem 2rem;
-  color: #f5f3f1; }
+  color: #f5f3f1;
+  position: relative;
+  bottom: 10px; }
 
 .word-rating {
   text-decoration: underline; }
