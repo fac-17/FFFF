@@ -1,6 +1,7 @@
 const test = require("tape");
 const runBuild = require("../model/database/db_build");
 const { findAllFoodItems, findAllFoodItemsPromise } = require("../model/queries/findQueries");
+const {resultsQuery} = require("../model/queries/resultsQuery")
 
 test("Check that we're ready for database testing", t => {
     t.assert(true, true, "Must return true");
@@ -55,3 +56,14 @@ test("Check findAllFoodItemsPromise queries correctly", t => {
             t.end();
         });
 });
+
+test("Check if resultsQuery returns items in order",t=>{
+    resultsQuery([1,3,4,5,6,7]).then(results=>{
+        let currentScore = 0;
+        results.rows.forEach( row=>{
+            t.equal(row.score>=currentScore,true,"Next score is more then currnet");
+            currentScore=row.score;
+        })
+        t.end();
+    })
+})
