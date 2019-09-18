@@ -76,7 +76,7 @@ VALUES
 INSERT INTO supermarkets
     (name)
 VALUES
-    ('Sainsburys'),
+    ('Sainsbury''s'),
     ('Tesco'),
     ('Lidl'),
     ('Aldi'),
