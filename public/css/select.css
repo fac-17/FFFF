@@ -5,7 +5,9 @@
   display: flex;
   flex-wrap: wrap;
   align-content: space-between;
-  justify-content: center; }
+  justify-content: center;
+  max-width: 720px;
+  margin: auto; }
 
 .product {
   background-color: white;
