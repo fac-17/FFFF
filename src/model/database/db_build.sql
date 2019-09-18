@@ -1,18 +1,6 @@
 BEGIN;
-    DROP TABLE IF EXISTS products
+    DROP TABLE IF EXISTS products, categories, supermarkets, origins, flags, entries
     CASCADE;
-DROP TABLE IF EXISTS categories
-CASCADE;
-DROP TABLE IF EXISTS supermarkets
-CASCADE;
-DROP TABLE IF EXISTS origins
-CASCADE;
-DROP TABLE IF EXISTS flags
-CASCADE;
-DROP TABLE IF EXISTS entries
-CASCADE;
-
-
 
 CREATE TABLE categories
 (
@@ -76,7 +64,7 @@ VALUES
 INSERT INTO supermarkets
     (name)
 VALUES
-    ('Sainsburys'),
+    ('Sainsbury''s'),
     ('Tesco'),
     ('Lidl'),
     ('Aldi'),
