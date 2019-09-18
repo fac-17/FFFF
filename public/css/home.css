@@ -12,7 +12,9 @@ html, .container-home {
   align-items: center; }
 
 .header-img {
-  width: 100vw; }
+  width: 100vw;
+  object-fit: cover;
+  max-height: 150px; }
 
 .header-txt, p, body, html {
   margin: 0px 0px;
@@ -42,14 +44,20 @@ html, .container-home {
   max-height: auto; }
 
 .header-txt {
-  right: 30%;
-  top: 5%;
-  z-index: 1; }
+  top: 50%;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-shadow: 1px 1px #000000; }
 
 .page-header {
   color: white;
   justify-content: center;
   text-align: center; }
+
+.wrapper0 {
+  position: relative; }
 
 .wrapper1 {
   margin-top: 10px;
