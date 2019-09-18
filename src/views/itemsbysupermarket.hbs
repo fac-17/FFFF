@@ -1,11 +1,18 @@
-<h1>
+<h1 class="title">
     {{supermarket}}
 </h1>
-<ul> 
-    {{#each result}}
-    <img class="product-img" src="assets/{{imagenamer pname}}.jpg">
-    <p>Product: {{{pname}}}</p>
-    <p>Origin: {{{oname}}} {{{emoji_code}}}</p>
-    <p>Food mileage score: {{{score}}}</p>
-    {{/each}}
-</ul>
+<div class="div-container">
+    <ul class ="list"> 
+        {{#each result}}
+        <div class="result-items">
+            <img class="product-img" src="assets/{{imagenamer pname}}.jpg">
+            <div class="text-container">
+                <p class="text product">{{{pname}}}</p>
+                <p class="text origin"> {{{oname}}} {{{emoji_code}}}</p>
+                <p class="text mileage">Food mileage score: {{{score}}}</p>
+            </div>
+        </div>
+        <hr class="line">
+        {{/each}}
+    </ul>
+</div>
