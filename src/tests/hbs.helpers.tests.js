@@ -37,3 +37,19 @@ test("Check if scorer number returns the correct string", t=> {
     t.equals(helpers.scorer(3), 'car', '3 returns car');
     t.end();
 })
+test('Check color function returns relevant color', t => {
+    t.equals(helpers.color(1), "#FA0000", "1 returns #FA0000");
+    t.end();
+})
+test('Check color function returns relevant color', t => {
+    t.equals(helpers.color(2), "#FB8800", "2 returns #FB8800");
+    t.end();
+})
+test('Check color function returns relevant color', t => {
+    t.equals(helpers.color(3), "#F5FA00", "3 returns #F5FA00");
+    t.end();
+})
+test('Check color function returns relevant color', t => {
+    t.equals(helpers.color(4), "#38F706", "4 returns #38F706");
+    t.end();
+})
