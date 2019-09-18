@@ -1,5 +1,21 @@
-<ul class = "resultsList">
+<h2 class="message">For your groceries, <b>{{winner}}</b> has the most locally sourced produce </h2>
+<ol class="resultsList">
     {{#each result}}
-    <li><a href="/itemsbysupermarket?{{../queryString}}&supermarket={{this.supermarket_id}}">{{this.sname }}  {{rounder this.score}}</a></li>
+    <li>
+        <a  href="/itemsbysupermarket?{{../queryString}}&supermarket={{this.supermarket_id}}">
+            {{this.sname }}
+            {{rounder this.score}}
+        </a>
+        <a class="link" href="/itemsbysupermarket?{{../queryString}}&supermarket={{this.supermarket_id}}">
+            <p class="breakdown">View breakdown
+        </a>
+            <br>
+        </p>
+    </li>
+    <p class="label">
+        <img src="assets/{{scorer this.score}}.png">
+        <br>
+        {{labels this.score}}
+    </p>
     {{/each}}
-</ul>
+</ol>
