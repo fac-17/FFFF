@@ -13,14 +13,14 @@ const findAllFoodItems = cb => {
     )
 }
 
-const findAllFoodItemsPromise = new Promise((resolve, reject) => {
-    dbConnection.query(
-        'SELECT products.id product_id, products.name pname, categories.name cname FROM products INNER JOIN categories ON products.category_id = categories.id;',
-        (err, res) => {
-            if (err) reject(err);
-            resolve(res.rows);
-        });
-});
+// const findAllFoodItemsPromise = new Promise((resolve, reject) => {
+//     dbConnection.query(
+//         'SELECT products.id product_id, products.name pname, categories.name cname FROM products INNER JOIN categories ON products.category_id = categories.id;',
+//         (err, res) => {
+//             if (err) reject(err);
+//             resolve(res.rows);
+//         });
+// });
 
 const findRowsCountForProductsSupermarketsOriginsFunction = () => {
     const tableNames = ["products", "supermarkets", "origins"];
@@ -30,4 +30,4 @@ const findRowsCountForProductsSupermarketsOriginsFunction = () => {
     return Promise.all(countPromises);
 }
 
-module.exports = { findAllFoodItems, findAllFoodItemsPromise, findRowsCountForProductsSupermarketsOriginsFunction }
+module.exports = { findAllFoodItems, findRowsCountForProductsSupermarketsOriginsFunction }
