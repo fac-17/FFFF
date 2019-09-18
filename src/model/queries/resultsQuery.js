@@ -11,8 +11,8 @@ exports.resultsQuery = productsIdArray => {
         JOIN supermarkets ON supermarkets.id = entries.supermarket_id 
         WHERE entries.product_id in (${productsIdArray.join(",")}) 
         GROUP BY supermarkets.id 
-        ORDER BY score) AS scoring 
-      JOIN supermarkets ON supermarkets.id=scoring.id
+       ) AS scoring 
+      JOIN supermarkets ON supermarkets.id=scoring.id  ORDER BY score
     `;
   return dbConnection.query(query);
 };
