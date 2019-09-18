@@ -26,7 +26,5 @@
     margin-bottom: 10px; }
 
 @media only screen and (min-width: 1000px) {
-  body {
-    font-size: 25px; }
   .link {
     font-size: 10px; } }
