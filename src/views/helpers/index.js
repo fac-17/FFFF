@@ -1,7 +1,8 @@
-module.exports ={
+module.exports = {
     rounder:require('./rounder'),
     imagenamer:require('./imagenamer'),
     scorer:require('./scorer'),
     labels:require('./labels'),
-    color:require('./color')
+    color:require('./color'),
+    indexplusone: require('./indexplusone')
 }

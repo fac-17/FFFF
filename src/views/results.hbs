@@ -1,21 +1,27 @@
-<h2 class="message">For your groceries, <b>{{winner}}</b> has the most locally sourced produce </h2>
-<ol class="resultsList">
-    {{#each result}}
-    <li>
-        <a  href="/itemsbysupermarket?{{../queryString}}&supermarket={{this.supermarket_id}}&score={{rounder this.score}}">
-            {{this.sname }}
-            {{rounder this.score}}
-        </a>
-        <a class="link" href="/itemsbysupermarket?{{../queryString}}&supermarket={{this.supermarket_id}}&score={{rounder this.score}}">
-            <p class="breakdown">View breakdown
-        </a>
-            <br>
-        </p>
-    </li>
-    <p class="label">
-        <img src="assets/{{scorer this.score}}.png">
-        <br>
-        {{labels this.score}}
-    </p>
-    {{/each}}
-</ol>
+<section class="main-body">
+    <h2 class="message">For your groceries, <b>{{winner}}</b> has the most locally sourced produce </h2>
+    <ul class="results-list">
+        {{#each result}}
+        <div class="result-box">
+            <li>
+                <a class="ranking-name"
+                    href="/itemsbysupermarket?{{../queryString}}&supermarket={{this.supermarket_id}}&score={{rounder this.score}}">
+                    #{{indexplusone @index}}: {{this.sname }}
+
+                </a>
+                <p class="label">
+                    <img src="assets/{{scorer this.score}}.png">
+
+                </p>
+                <p class="word-rating">
+                    {{labels this.score}}
+                </p>
+                <a class="link" href="/itemsbysupermarket?{{../queryString}}&supermarket={{this.supermarket_id}}&score={{rounder this.score}}">
+                    <p class="button breakdown">View breakdown</p>
+                </a>
+            </li>
+
+        </div>
+        {{/each}}
+    </ul>
+</section>
