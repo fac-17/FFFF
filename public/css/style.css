@@ -37,7 +37,7 @@ a {
   text-decoration: none;
   color: inherit; }
 
-input[type="submit"], button {
+input[type="submit"], button, .button {
   background: #00b495;
   color: #f5f3f1;
   font-weight: bold;
