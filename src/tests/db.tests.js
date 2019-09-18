@@ -60,8 +60,8 @@ test("Check findAllFoodItemsPromise queries correctly", t => {
 test("Check if resultsQuery returns items in order",t=>{
     resultsQuery([1,3,4,5,6,7]).then(results=>{
         let currentScore = 0;
-        results.rows.forEach(row=>{
-            t.equal(row.score>currentScore,true,"Next score is more then currnet");
+        results.rows.forEach( row=>{
+            t.equal(row.score>=currentScore,true,"Next score is more then currnet");
             currentScore=row.score;
         })
         t.end();
