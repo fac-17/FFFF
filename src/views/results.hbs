@@ -2,11 +2,11 @@
 <ol class="resultsList">
     {{#each result}}
     <li>
-        <a  href="/itemsbysupermarket?{{../queryString}}&supermarket={{this.supermarket_id}}">
+        <a  href="/itemsbysupermarket?{{../queryString}}&supermarket={{this.supermarket_id}}&score={{rounder this.score}}">
             {{this.sname }}
             {{rounder this.score}}
         </a>
-        <a class="link" href="/itemsbysupermarket?{{../queryString}}&supermarket={{this.supermarket_id}}">
+        <a class="link" href="/itemsbysupermarket?{{../queryString}}&supermarket={{this.supermarket_id}}&score={{rounder this.score}}">
             <p class="breakdown">View breakdown
         </a>
             <br>

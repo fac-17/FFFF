@@ -1,7 +1,9 @@
-.div-container {
+.div-container,
+.label {
   display: flex;
   flex-direction: column;
-  align-items: center; }
+  align-items: center;
+  padding-bottom: 50px; }
 
 .result-items {
   padding-left: 10px;

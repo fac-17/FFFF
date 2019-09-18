@@ -8,7 +8,8 @@ exports.get = (req, res) => {
             result: result.rows, 
             cssPath: '/css/itemsbysupermarket.css',
             back: `${req.url.split('itemsbysupermarket').join('results')}`,
-            supermarket: result.rows[0].sname
+            supermarket: result.rows[0].sname,
+            score: Number(req.query.score)
         });
     });
 }
