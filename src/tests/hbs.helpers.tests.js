@@ -65,3 +65,11 @@ test('Check color function returns relevant color', t => {
     t.equals(helpers.color(1), "#38F706", "1 returns #38F706");
     t.end();
 })
+test('Check score_label_individual function returns a string', t => {
+    t.equals(typeof helpers.score_label_individual(1),"string", "Should be a string");
+    t.end();
+})
+test('Check score_label_individual function returns a correct string for 1', t => {
+    t.equals(helpers.score_label_individual(1),"Locally sourced","Returns relevant string");
+    t.end();
+})
