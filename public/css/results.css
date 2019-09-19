@@ -23,8 +23,15 @@
   display: block;
   margin: 0 auto; }
 
-.label img {
-  width: 200px; }
+.label {
+  position: relative;
+  top: 5px; }
+  .label img {
+    width: 200px; }
 
 .button {
   width: 80px; }
+
+.word-rating {
+  position: relative;
+  bottom: 5px; }
