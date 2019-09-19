@@ -2,19 +2,21 @@
     {{supermarket}}
 </h1>
 <p class="label" style="color:{{color score}}">
-    <img class="product-img" src="assets/{{scorer score}}.png">
-    <br>
-    {{labels score}}
+    <img class="rating-icons" src="assets/{{scorer score}}.png">
+    <h2>{{labels score}}</h2>
 </p>
-<div class="div-container">
+<div class=" div-container">
     <ul class="list">
         {{#each result}}
         <div class="result-items">
-            <img class="product-img" src="assets/{{imagenamer pname}}.jpg">
+            <div class="img-container">
+                <img class="product-img" src="assets/{{imagenamer pname}}.jpg">
+            </div>
             <div class="text-container">
                 <p class="text product">{{{pname}}}</p>
                 <p class="text origin"> {{{oname}}} {{{emoji_code}}}</p>
-                <p class="text mileage">{{{score_label_individual this.score}}}</p>
+                <p class="text mileage" style="border: solid 2px {{color this.score}}">
+                    {{{score_label_individual this.score}}}</p>
             </div>
         </div>
         <hr class="line">
