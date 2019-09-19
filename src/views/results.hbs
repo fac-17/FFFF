@@ -1,16 +1,16 @@
 <section class="main-body">
     <h2 class="message">For your groceries, <b>{{winner}}</b> has the most locally sourced produce </h2>
-    <ul class="results-list">
+    <div class="results-list">
         {{#each result}}
         <div class="result-box">
-            <li>
+            <div>
                 <a class="ranking-name"
                     href="/itemsbysupermarket?{{../queryString}}&supermarket={{this.supermarket_id}}&score={{rounder this.score}}">
                     #{{indexplusone @index}}: {{this.sname }}
 
                 </a>
                 <p class="label">
-                    <img src="assets/{{scorer this.score}}.png">
+                    <img src="assets/{{scorer this.score}}.png" alt="food-mileage-score-img">
 
                 </p>
                 <p class="word-rating">
@@ -19,9 +19,9 @@
                 <a class="link" href="/itemsbysupermarket?{{../queryString}}&supermarket={{this.supermarket_id}}&score={{rounder this.score}}">
                     <p class="button breakdown">View breakdown</p>
                 </a>
-            </li>
+            </div>
 
         </div>
         {{/each}}
-    </ul>
+    </div>
 </section>
