@@ -1,4 +1,4 @@
-# :seedling: [Food Miles](https://ffff-fac.herokuapp.com/) :seedling:
+# :seedling: [Food Miles](https://foodmiles.herokuapp.com/) :seedling:
 As a user, I need an easy way to find out how local my shopping list is by comparing supermarkets and where they source their food from.
 
 ![](https://media.giphy.com/media/yaxcIHO5OgP4Y/giphy.gif)
