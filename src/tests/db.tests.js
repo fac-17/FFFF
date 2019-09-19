@@ -1,6 +1,6 @@
 const test = require("tape");
 const runBuild = require("../model/database/db_build");
-const { findAllFoodItems, findAllFoodItemsPromise } = require("../model/queries/findQueries");
+const { findAllFoodItems} = require("../model/queries/findQueries");
 const {resultsQuery} = require("../model/queries/resultsQuery")
 
 test("Check that we're ready for database testing", t => {
@@ -39,23 +39,7 @@ test("Check findAllFoodItems queries correctly", t => {
     })
 });
 
-test("Check findAllFoodItemsPromise queries correctly", t => {
-    findAllFoodItemsPromise
-        .then(res => {
-            const expected = [
-                { product_id:1,pname: 'Banana', cname: 'Fruit' },
-                { product_id:2,pname: 'Potato', cname: 'Vegetables' },
-                { product_id:3,pname: 'Sausages', cname: 'Meat' },
-                { product_id:4,pname: 'Apple', cname: 'Fruit' }
-            ];
-            t.deepEquals(res.slice(0,4), expected);
-            t.end();
-        })
-        .catch(err => {
-            t.error(err, "Unable to findAllFoodItems");
-            t.end();
-        });
-});
+
 
 test("Check if resultsQuery returns items in order",t=>{
     resultsQuery([1,3,4,5,6,7]).then(results=>{

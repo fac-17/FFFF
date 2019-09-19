@@ -28,7 +28,9 @@ h3 {
       width: 60px;
       height: auto; }
   .navbar a {
-    padding: 0px 2rem; }
+    padding: 0px 2rem;
+    font-size: 1.25rem;
+    text-transform: uppercase; }
 
 ul {
   list-style-type: none;
