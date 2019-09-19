@@ -12,7 +12,8 @@ exports.get = (req, res) => {
 
         resultsArray(productIds)
             .then(result => {
-                res.render("results", { result, queryString, back: "/select", cssPath: '/css/results.css',winner:result[0].sname });
+                res.render("results", { result, queryString, back: "/select", cssPath: '/css/results.css',winner:result[0].sname,
+                 pageTitle:"Food Miles Result" });
             }).catch(console.err)
     }
 };
