@@ -36,7 +36,7 @@ const appendToForm = (form, itemValue) => {
 
 // create a list item with name/text itemName and append a given value to the shopping list
 const appendToList = (list, itemName) => {
-    const listItem = document.createElement("li");
+    const listItem = document.createElement("div");
     listItem.dataset.name = itemName;
     listItem.innerText = itemName;
     list.appendChild(listItem);

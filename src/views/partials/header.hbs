@@ -1,11 +1,9 @@
 {{#unless home}}
 <header class="navbar">
-  <ul>
     {{#if back}}
-    <li><a href={{back}} class="navbar-back"> Back</a></li>
+    <div class="nav__link nav__text--left"><a href={{back}} class="nav__link"> Back</a></div>
     {{/if}}
-    <a href='/' class="navbar-logo"><img src="/assets/vegetables.svg"></a>
-    <li><a href='/' class="navbar-back">Home </a></li>
-  </ul>
+    <a href='/' class="nav__link"><img class="navbar-logo" src="/assets/vegetables.svg" alt="basket with veggies logo"></a>
+    <div class="nav__link nav__text--right"><a href='/' class="nav__link">Home </a></div>
 </header>
 {{/unless}}

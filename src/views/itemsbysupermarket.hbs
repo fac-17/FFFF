@@ -2,15 +2,15 @@
     {{supermarket}}
 </h1>
 <p class="label" style="color:{{color score}}">
-    <img class="rating-icons" src="assets/{{scorer score}}.png">
+    <img class="rating-icons" src="assets/{{scorer score}}.png" alt="food-mileage-score-img">
     <h2>{{labels score}}</h2>
 </p>
 <div class=" div-container">
-    <ul class="list">
+    <div class="list">
         {{#each result}}
         <div class="result-items">
             <div class="img-container">
-                <img class="product-img" src="assets/{{imagenamer pname}}.jpg">
+                <img class="product-img" src="assets/{{imagenamer pname}}.jpg" alt="{{this.pname}}-image">
             </div>
             <div class="text-container">
                 <p class="text product">{{{pname}}}</p>
@@ -21,5 +21,5 @@
         </div>
         <hr class="line">
         {{/each}}
-    </ul>
+    </div>
 </div>
