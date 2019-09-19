@@ -1,3 +1,5 @@
+// Independently run script, currently as npm run db_init
+// that drop all project tables, rebuilds them according to schema and populates with random data
 const runBuild = require("./db_build");
 
 runBuild((err, res) => {

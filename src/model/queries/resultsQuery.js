@@ -1,7 +1,6 @@
 const dbConnection = require("../database/db_connection");
 
 exports.resultsQuery = productsIdArray => {
-  
   const query = `
     SELECT supermarkets.name sname, supermarkets.id supermarket_id,scoring.score 
      FROM
@@ -19,8 +18,7 @@ exports.resultsQuery = productsIdArray => {
 
 // returns a Promise that resolves to sorted array with objects [{sname:"Tesco",score:2.3333},{sname:"Sainsbury",score:3.5}]
 exports.resultsArray = productsIdArray => {
-  return exports
-    .resultsQuery(productsIdArray)
+  return exports.resultsQuery(productsIdArray)
     .then(res=>res.rows)
 
 };
