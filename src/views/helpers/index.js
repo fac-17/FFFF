@@ -4,5 +4,6 @@ module.exports = {
     scorer:require('./scorer'),
     labels:require('./labels'),
     color:require('./color'),
-    indexplusone: require('./indexplusone')
+    indexplusone: require('./indexplusone'),
+    score_label_individual: require('./score_label_individual')
 }
