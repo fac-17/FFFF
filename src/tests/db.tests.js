@@ -28,10 +28,10 @@ test("Check findAllFoodItems queries correctly", t => {
             t.end();
         } else {
             const expected = [
-                { product_id:1,pname: 'Banana', cname: 'Fruit' },
-                { product_id:2,pname: 'Potato', cname: 'Vegetables' },
+                { product_id:1,pname: 'Bananas', cname: 'Fruit' },
+                { product_id:2,pname: 'Potatoes', cname: 'Vegetables' },
                 { product_id:3,pname: 'Sausages', cname: 'Meat' },
-                { product_id:4,pname: 'Apple', cname: 'Fruit' }
+                { product_id:4,pname: 'Apples', cname: 'Fruit' }
             ];
             t.deepEquals(res.slice(0,4), expected);
             t.end();

@@ -49,16 +49,16 @@ VALUES
 INSERT INTO products
     (name, category_id)
 VALUES
-    ('Banana', 1),
-    ('Potato', 2 ),
+    ('Bananas', 1),
+    ('Potatoes', 2 ),
     ('Sausages', 3),
-    ('Apple', 1),
+    ('Apples', 1),
     ('Broccoli',2),
-    ('Sweet Potato',2),
+    ('Sweet Potatoes',2),
     ('Spinach',2),
-    ('Mushroom',2),
+    ('Mushrooms',2),
     ('Strawberries',1),
-    ('Orange',1),
+    ('Oranges',1),
     ('Bacon',3),
     ('Chicken',3);
 INSERT INTO supermarkets
@@ -86,7 +86,7 @@ VALUES
     ('Ireland', 2, 2),
     ('Kent/UK',1,3),
     ('Yorkshire/UK',2,3),
-    ('Harefordshire/UK',1,3),
+    ('Hertfordshire/UK',1,3),
     ('Poland',3,4),
     ('Japan',4,5),
     ('Spain',3,6);
