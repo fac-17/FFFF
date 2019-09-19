@@ -17,8 +17,8 @@ h3 {
   font-weight: 500; }
 
 .navbar {
-  background-color: #00b495;
-  color: #f5f3f1;
+  background-color: #00A88C;
+  color: white;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   text-transform: uppercase;
@@ -58,7 +58,7 @@ a {
   color: inherit; }
 
 input[type="submit"], button, .button {
-  background: #00b495;
+  background: #00A88C;
   color: #f5f3f1;
   font-weight: bold;
   padding: 0.5rem 4rem;
