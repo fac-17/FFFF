@@ -1,16 +1,15 @@
 <h2 class="select-items-title">Select your items</h2>
-<ul class="item-list">
+<div class="item-list">
     {{#each data}}
-    <li class="product" data-name="{{this.pname}}" data-value="{{this.product_id}}">
-        <img class="product-img" src="assets/{{imagenamer this.pname}}.jpg">
+    <div class="product" data-name="{{this.pname}}" data-value="{{this.product_id}}">
+        <img class="product-img" src="assets/{{imagenamer this.pname}}.jpg"  alt="{{this.pname}}-image">
         <div class="product-name">{{this.pname}}</div>
-    </li>
+    </div>
     {{/each}}
-</ul>
+</div>
 <div class="shopping-list--wrapper hidden">
     <h2>Your shopping list</h2>
-    <ul class="shopping-list"></ul>
-    </ul>
+    <div class="shopping-list"></div>
 </div>
 <form action="/results" method="get" class="shopping-form">
     <input type="submit" class="hidden submit-button" value="Submit">
