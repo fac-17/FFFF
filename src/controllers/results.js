@@ -13,7 +13,7 @@ exports.get = (req, res) => {
         resultsArray(productIds)
             .then(result => {
                 res.render("results", { result, queryString, back: "/select", cssPath: '/css/results.css',winner:result[0].sname,
-                 pageTitle:"Food Miles Result" });
+                 pageTitle:"Food Miles Results" });
             }).catch(console.err)
     }
 };
