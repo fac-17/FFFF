@@ -4,7 +4,12 @@
   align-items: center; }
 
 .heading {
-  font-size: 60px; }
+  font-size: 30px; }
 
 .para {
-  font-size: 30px; }
+  font-size: 20px; }
+
+.gif {
+  border-radius: 50%;
+  max-width: 300px;
+  margin-bottom: 20px; }
