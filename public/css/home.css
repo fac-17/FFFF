@@ -32,6 +32,10 @@ html, .container-home {
   .step .digit {
     margin-top: -3px; }
 
+.home-paragraph {
+  text-align: left;
+  margin-left: 1rem; }
+
 .wrapper2, .wrapper4, .wrapper6 {
   display: grid;
   grid-template-columns: 1fr 9fr;
