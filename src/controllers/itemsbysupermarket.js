@@ -9,7 +9,8 @@ exports.get = (req, res) => {
             cssPath: '/css/itemsbysupermarket.css',
             back: `${req.url.split('itemsbysupermarket').join('results')}`,
             supermarket: result.rows[0].sname,
-            score: Number(req.query.score)
+            score: Number(req.query.score),
+            pageTitle: result.rows[0].sname+" - Breakdown"
         });
     });
 }
