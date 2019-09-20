@@ -10,7 +10,8 @@
     "test": "NODE_ENV=test nyc tape src/tests/*tests.js | tap-spec",
     "db_init": "node src/model/database/db_init.js",
     "scss": "node-sass --watch public/scss -o public/css",
-    "sass": "node-sass --watch public/sass -o public/css"
+    "sass": "node-sass --watch public/sass -o public/css",
+    "report-coverage": " nyc report --reporter=text-lcov > coverage.lcov && codecov"
   },
   "repository": {
     "type": "git",
@@ -30,6 +31,7 @@
     "pg": "^7.12.1"
   },
   "devDependencies": {
+    "codecov": "^3.6.0",
     "eslint": "^6.3.0",
     "nock": "^11.3.3",
     "node-sass": "^4.12.0",
