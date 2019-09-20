@@ -14,7 +14,8 @@
 
 .title {
   text-align: center;
-  font-size: 30px; }
+  font-size: 30px;
+  padding-top: 20px; }
 
 .text {
   font-size: 20px;
