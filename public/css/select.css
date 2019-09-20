@@ -10,6 +10,7 @@
   margin: auto; }
 
 .product {
+  cursor: pointer;
   background-color: white;
   border: 2px solid white;
   margin: 2px;
@@ -49,5 +50,6 @@
   justify-content: center; }
 
 .submit-button {
+  cursor: pointer;
   margin-top: 20px;
   margin-bottom: 50px; }

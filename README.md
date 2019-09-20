@@ -3,6 +3,11 @@ As a user, I need an easy way to find out how local my shopping list is by compa
 
 ![](https://media.giphy.com/media/yaxcIHO5OgP4Y/giphy.gif)
 
+[![Build Status](https://travis-ci.com/fac-17/FFFF.svg?branch=master)](https://travis-ci.com/fac-17/FFFF)
+[![codecov](https://codecov.io/gh/fac-17/FFFF/branch/master/graph/badge.svg)](https://codecov.io/gh/fac-17/FFFF)
+[![Dependencies](http://img.shields.io/david/fac-17/FFFF.svg?style=flat)](https://david-dm.org/fac-17/FFFF)
+![Heroku](https://heroku-badge.herokuapp.com/?app=foodmiles)
+
 ## Tech Stack
 1. NodeJS + ExpressJS
 2. PostgreSQL
