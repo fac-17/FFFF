@@ -34,7 +34,7 @@
     "codecov": "^3.6.0",
     "eslint": "^6.3.0",
     "nock": "^11.3.3",
-    "node-sass": "^4.12.0",
+    "node-sass": "^7.0.0",
     "nodemon": "^1.19.2",
     "nyc": "^14.1.1",
     "supertest": "^4.0.2",
